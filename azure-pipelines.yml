@@ -19,7 +19,7 @@ steps:
     xcWorkspacePath: 'Ratios/coffeeRatioApp.xcodeproj/project.xcworkspace'
     configuration: 'Release'
     sdk:
-    xcodeVersion: 'Default'
+    xcodeVersion: '13'
     packageApp: false
     destinationPlatformOption: 'iOS'
     destinationSimulators: 'iPhone 11'
@@ -32,15 +32,10 @@ steps:
     xcWorkspacePath: 'Ratios/coffeeRatioApp.xcodeproj/project.xcworkspace'
     configuration: 'Release'
     sdk:
-    xcodeVersion: 'Default'
+    xcodeVersion: '13'
     packageApp: false
     destinationPlatformOption: 'iOS'
     destinationSimulators: 'iPhone 11'
     publishJUnitResults: true
     testRunTitle: 'Run_Tests'
 
-- task: Xcode@5
-  inputs:
-    actions: 'build'
-    xcWorkspacePath: 'Ratios/*.xcodeproj'
-    packageApp: false
