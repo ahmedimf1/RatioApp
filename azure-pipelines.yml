@@ -1,0 +1,46 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- main
+
+pool:
+  vmImage: 'macos-latest'
+
+steps:
+- script: echo Hello, world!
+  displayName: 'Run a one-line script'
+
+- task: Xcode@5
+  inputs:
+    actions: 'build'
+    xcWorkspacePath: 'Ratios/'
+    configuration: 'Release'
+    sdk: '$(SDK)'
+    xcodeVersion: '12'
+    packageApp: false
+    destinationPlatformOption: 'iOS'
+    destinationSimulators: 'iPhone 11'
+    publishJUnitResults: true
+    testRunTitle: 'Run_Tests'
+
+- task: Xcode@5
+  inputs:
+    actions: 'test'
+    xcWorkspacePath: 'Ratios/'
+    configuration: 'Release'
+    sdk: '$(SDK)'
+    xcodeVersion: '12'
+    packageApp: false
+    destinationPlatformOption: 'iOS'
+    destinationSimulators: 'iPhone 11'
+    publishJUnitResults: true
+    testRunTitle: 'Run_Tests'
+
+- task: Xcode@5
+  inputs:
+    actions: 'build'
+    xcWorkspacePath: 'Ratios/*.xcodeproj'
+    packageApp: false
