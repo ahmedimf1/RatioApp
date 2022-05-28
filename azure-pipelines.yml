@@ -18,7 +18,7 @@ steps:
     actions: 'build'
     xcWorkspacePath: 'Ratios/coffeeRatioApp.xcodeproj/project.xcworkspace'
     configuration: 'Release'
-    sdk: '$(SDK)'
+    sdk:
     xcodeVersion: '12'
     packageApp: false
     destinationPlatformOption: 'iOS'
@@ -31,7 +31,7 @@ steps:
     actions: 'test'
     xcWorkspacePath: 'Ratios/coffeeRatioApp.xcodeproj/project.xcworkspace'
     configuration: 'Release'
-    sdk: '$(SDK)'
+    sdk:
     xcodeVersion: '12'
     packageApp: false
     destinationPlatformOption: 'iOS'
