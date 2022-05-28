@@ -16,7 +16,7 @@ steps:
 - task: Xcode@5
   inputs:
     actions: 'build'
-    xcWorkspacePath: 'Ratios/'
+    xcWorkspacePath: 'Ratios/coffeeRatioApp.xcodeproj/project.xcworkspace'
     configuration: 'Release'
     sdk: '$(SDK)'
     xcodeVersion: '12'
@@ -29,7 +29,7 @@ steps:
 - task: Xcode@5
   inputs:
     actions: 'test'
-    xcWorkspacePath: 'Ratios/'
+    xcWorkspacePath: 'Ratios/coffeeRatioApp.xcodeproj/project.xcworkspace'
     configuration: 'Release'
     sdk: '$(SDK)'
     xcodeVersion: '12'
